@@ -1,5 +1,27 @@
 
  An esolang based on legendre symbols. This language is heavily based off of [Kak](https://esolangs.org/wiki/Kak).
+ 
+# Example
+ 
+ The file [hello_world.leg](hello_world.leg) contains a possibile hello world in Legend. 
+ 
+ (Image to show the program with text wrapping)
+ ![image](https://user-images.githubusercontent.com/92041779/193173700-8d5336aa-b9cc-4769-9318-df917f1d14c7.png)
+
+ When compiled it produces a binary string:
+ 
+ ```
+ $ legend.exe hello_world.leg
+ 010010000110010101101100011011000110111100101100001000000101011101101111011100100110110001100100001000010
+ ```
+ 
+ *SIDE NOTE: The program [hello_gen.py](hello_gen.py) was used this generate this program randomly. It was not written by hand.*
+ 
+ If you split this binary string into octals, it forms the ASCII text `Hello, World!`. 
+ 
+ Proof:
+ 
+ ![image](https://user-images.githubusercontent.com/92041779/193173857-695720ab-2cea-4bfd-9c02-b443efd060d1.png)
 
 # Spec
 
@@ -31,25 +53,3 @@
  ## Windows
  
   Go into the directory and run this command: `swipl -o legend.exe -c i.pl --goal=main`. Now you will have a `legend.exe` which you can use like this: `legend.exe program.leg`.
-  
-# Example
- 
- The file [hello_world.leg](hello_world.leg) contains a possibile hello world in Legend. 
- 
- (Image to show the program with text wrapping)
- ![image](https://user-images.githubusercontent.com/92041779/193173700-8d5336aa-b9cc-4769-9318-df917f1d14c7.png)
-
- When compiled it produces a binary string:
- 
- ```
- $ legend.exe hello_world.leg
- 010010000110010101101100011011000110111100101100001000000101011101101111011100100110110001100100001000010
- ```
- 
- *SIDE NOTE: The program [hello_gen.py](hello_gen.py) was used this generate this program randomly. It was not written by hand.*
- 
- If you split this binary string into octals, it forms the ASCII text `Hello, World!`. 
- 
- Proof:
- 
- ![image](https://user-images.githubusercontent.com/92041779/193173857-695720ab-2cea-4bfd-9c02-b443efd060d1.png)
