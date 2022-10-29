@@ -35,6 +35,8 @@
  ## Semantics
   A Legend program consists of `n` [legendre symbols](https://en.wikipedia.org/wiki/Legendre_symbol) of the form `(a/p)` where `a` is some positive number and `p` is an odd prime. 
   
+  **RULE: every legenrdre symbol must be different or else it will fail.**
+  
   Each legendre symbol evaluates to `0`, `1` or `-1`. Each value corresponds to some instructions:
   | Value |                          Instruction                                      |
   | ----- |                            :----:                                         |
@@ -43,6 +45,10 @@
   | 0     | Skip the next instruction if the current cell's bit is zero (0)           |
   
   Thus, every program structure has infinitely many implementations.
+  
+  In addition, once the interpreter reaches the last legendre symbol, it tests whether the current cell is `0`. If it is, it stops execution, and if not, it executes the instructions again. (It also prints the current tape at the end of each iteration).
+  
+  
   
 # Use
 
